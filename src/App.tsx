@@ -106,7 +106,7 @@ const PROJECTS = [
   },
   {
     id: 8,
-    title: 'Big Dutchman Madaraka Day',
+    title: 'Big Dutchman East Africa - Madaraka Day',
     category: 'Print & Collateral',
     year: '2026',
     img: '/projects/Big Dutchman Madaraka Day.jpg',
