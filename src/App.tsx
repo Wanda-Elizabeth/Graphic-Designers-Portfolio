@@ -487,7 +487,7 @@ export default function App() {
             </h2>
 
             <p style={{ fontSize: 16, lineHeight: 1.8, color: '#94a3b8', marginBottom: '1.5rem', fontWeight: 300 }}>
-              I am a graphic designer and creative entrepreneur with over 10 years of professional experience. I built Vivid from a single vision — to turn creativity into timeless brand experiences — and have grown it into a studio that shapes brands, identities, and stories for clients across the globe.
+              I am a graphic designer and creative entrepreneur with over 10 years of professional experience. I built Vivid Designs from a single vision — to turn creativity into timeless brand experiences — and have grown it into a studio that shapes brands, identities, and stories for clients across the globe.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.8, color: '#94a3b8', marginBottom: '2.5rem', fontWeight: 300 }}>
               As a Graphic Designer at Big Dutchman, I direct design decisions, mentor creative teams, and ensure brand excellence across every touchpoint. I believe great design does more than look beautiful. It tells stories, builds trust, and makes ideas live forever.
