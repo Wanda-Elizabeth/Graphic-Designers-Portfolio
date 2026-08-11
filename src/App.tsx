@@ -329,7 +329,7 @@ export default function App() {
                 maxWidth: 540, marginBottom: '2.5rem',
                 fontWeight: 300,
               }}>
-                10 years of turning bold ideas into iconic visual identities. Self-employed freelancer, Graphic Designer at Big Dutchman, and CEO of Vivid — I design brands that people remember.
+                10 years of turning bold ideas into iconic visual identities. Graphic Designer at Big Dutchman, CEO of Vivid Designs, and available for select side projects — I design brands that people remember.
               </p>
 
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
