@@ -109,15 +109,15 @@ const PROJECTS = [
     title: 'Big Dutchman East Africa - Madaraka Day',
     category: 'Print & Collateral',
     year: '2026',
-    img: '/projects/Big Dutchman Madaraka Day.jpg',
+    img: '/projects/Big Dutchman East Africa Madaraka Day.jpg',
     accent: '#ff8c00',
   },
   {
     id: 9,
-    title: 'Big Dutchman Exhibition',
+    title: 'Big Dutchman East Africa Exhibition',
     category: 'Print & Collateral',
     year: '2026',
-    img: '/projects/Big Dutchman Exhibition.jpg',
+    img: '/projects/Big Dutchman East Africa Exhibition.jpg',
     accent: '#ff8c00',
   }
   ,
@@ -332,7 +332,7 @@ export default function App() {
                 <span style={{
                   fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.2em',
                   color: '#14b8a6', textTransform: 'uppercase',
-                }}>Graphic Designer @ Big Dutchman</span>
+                }}>Graphic Designer @ Big Dutchman East Africa</span>
               </div>
 
               {/* Main heading */}
@@ -362,7 +362,7 @@ export default function App() {
                 maxWidth: 540, marginBottom: '2.5rem',
                 fontWeight: 300,
               }}>
-                10 years of turning bold ideas into iconic visual identities. Graphic Designer at Big Dutchman, CEO of Vivid Designs, and available for select side projects — I design brands that people remember.
+                10 years of turning bold ideas into iconic visual identities. Graphic Designer at Big Dutchman East Africa, CEO of Vivid Designs, and available for select side projects — I design brands that people remember.
               </p>
 
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -523,7 +523,7 @@ export default function App() {
               I am a graphic designer and creative entrepreneur with over 10 years of professional experience. I built Vivid Designs from a single vision — to turn creativity into timeless brand experiences — and have grown it into a studio that shapes brands, identities, and stories for clients across the globe.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.8, color: '#94a3b8', marginBottom: '2.5rem', fontWeight: 300 }}>
-              As a Graphic Designer at Big Dutchman, I direct design decisions, mentor creative teams, and ensure brand excellence across every touchpoint. I believe great design does more than look beautiful. It tells stories, builds trust, and makes ideas live forever.
+              As a Graphic Designer at Big Dutchman East Africa, I direct design decisions, mentor creative teams, and ensure brand excellence across every touchpoint. I believe great design does more than look beautiful. It tells stories, builds trust, and makes ideas live forever.
             </p>
 
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
