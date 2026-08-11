@@ -774,9 +774,9 @@ export default function App() {
           </p>
           <div style={{ display: 'flex', gap: '2rem' }}>
             {[
-              { label: 'Instagram', url: 'https://instagram.com' },
-              { label: 'LinkedIn', url: 'https://linkedin.com' },
-              { label: 'Twitter', url: 'https://twitter.com' },
+              { label: 'Instagram', url: 'https://www.instagram.com/vividdesigns01' },
+              { label: 'Twitter', url: 'https://x.com/DanteStomper' },
+              { label: 'Facebook', url: 'https://www.facebook.com/share/19bLDEhtUB/' },
               { label: 'Email', url: 'mailto:kamaudante@gmail.com' },
             ].map(social => (
               <a
