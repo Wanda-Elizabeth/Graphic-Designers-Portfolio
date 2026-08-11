@@ -67,7 +67,7 @@ const PROJECTS = [
   {
     id: 3,
     title: 'Arbanite Farm Ventures',
-    category: 'Logo Design',
+    category: 'Print & Collateral',
     year: '2023',
     img: '/projects/Arbanite Farm Ventures.jpg',
     accent: '#818cf8',
@@ -96,6 +96,39 @@ const PROJECTS = [
     img: '/projects/MIIRI & ASSOCIATES ADVOCATES.jpg',
     accent: '#2dd4bf',
   },
+  {
+    id: 7,
+    title: 'Mo Dance Competition',
+    category: 'Print & Collateral',
+    year: '2025',
+    img: '/projects/Mo Dance.jpg',
+    accent: '#ff6b35',
+  },
+  {
+    id: 8,
+    title: 'Big Dutchman Madaraka Day',
+    category: 'Print & Collateral',
+    year: '2026',
+    img: '/projects/Big Dutchman Madaraka Day.jpg',
+    accent: '#ff8c00',
+  },
+  {
+    id: 9,
+    title: 'Big Dutchman Exhibition',
+    category: 'Print & Collateral',
+    year: '2026',
+    img: '/projects/Big Dutchman Exhibition.jpg',
+    accent: '#ff8c00',
+  }
+  ,
+  {
+    id: 10,
+    title: 'Ruth & Michael Wedding Invitation',
+    category: 'Wedding Invitations',
+    year: '2026',
+    img: '/projects/Ruth and Michael Wedding.jpg',
+    accent: '#10b981',
+  }
 ]
 
 const FILTERS = ['All', 'Brand Identity', 'Logo Design', 'Wedding Invitations', 'Print & Collateral']
@@ -299,7 +332,7 @@ export default function App() {
                 <span style={{
                   fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.2em',
                   color: '#14b8a6', textTransform: 'uppercase',
-                }}>CEO, Vivid · Graphic Designer @ Big Dutchman</span>
+                }}>Graphic Designer @ Big Dutchman</span>
               </div>
 
               {/* Main heading */}
