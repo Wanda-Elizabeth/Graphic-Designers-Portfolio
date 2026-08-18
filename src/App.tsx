@@ -153,14 +153,7 @@ const PROJECTS = [
     img: '/projects/Liverpool vs Arsenal Event.png',
     accent: '#dc2626',
   },
-  {
-    id: 22,
-    title: 'Exploranova Tours',
-    category: 'Logo Design',
-    year: '2024',
-    img: '/projects/Exploranova Tours.png',
-    accent: '#a78b6f',
-  },
+
   {
     id: 11,
     title: 'Product Branding',
