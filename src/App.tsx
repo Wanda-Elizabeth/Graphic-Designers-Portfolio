@@ -57,14 +57,6 @@ const PROJECTS = [
     accent: '#2dd4bf',
   },
   {
-    id: 2,
-    title: 'Jones Africa',
-    category: 'Brand Identity',
-    year: '2024',
-    img: '/projects/Jones Africa.jpg',
-    accent: '#f59e0b',
-  },
-  {
     id: 3,
     title: 'Arbanite Farm Ventures',
     category: 'Print & Collateral',
@@ -128,10 +120,42 @@ const PROJECTS = [
     year: '2026',
     img: '/projects/Ruth and Michael Wedding.jpg',
     accent: '#10b981',
+  },
+  {
+    id: 11,
+    title: 'Product Branding',
+    category: 'Product Branding',
+    year: '2026',
+    img: '/projects/Product Branding Combined.jpeg',
+    accent: '#22c55e',
+  },
+  {
+    id: 12,
+    title: 'Kalita Nails [Image #2]',
+    category: 'Logo Design',
+    year: '2026',
+    img: '/projects/Kalita Nails Logo.png',
+    accent: '#e91e63',
+  },
+  {
+    id: 13,
+    title: 'Makeup Maven [Image #3]',
+    category: 'Logo Design',
+    year: '2026',
+    img: '/projects/Makeup Maven Logo.png',
+    accent: '#a1887f',
+  },
+  {
+    id: 14,
+    title: 'Product Branding [Image #3]',
+    category: 'Product Branding',
+    year: '2026',
+    img: '/projects/Product Branding HISANI.png',
+    accent: '#10b981',
   }
 ]
 
-const FILTERS = ['All', 'Brand Identity', 'Logo Design', 'Wedding Invitations', 'Print & Collateral']
+const FILTERS = ['Brand Identity', 'Logo Design', 'Wedding Invitations', 'Print & Collateral', 'Product Branding']
 
 const TESTIMONIALS = [
   {
@@ -155,7 +179,7 @@ const TESTIMONIALS = [
 ]
 
 export default function App() {
-  const [activeFilter, setActiveFilter] = useState('All')
+  const [activeFilter, setActiveFilter] = useState('Brand Identity')
   const [scrolled, setScrolled] = useState(false)
   const [hoveredProject, setHoveredProject] = useState<number | null>(null)
   const [menuOpen, setMenuOpen] = useState(false)
