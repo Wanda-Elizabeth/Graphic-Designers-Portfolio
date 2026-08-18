@@ -154,14 +154,6 @@ const PROJECTS = [
     accent: '#dc2626',
   },
   {
-    id: 21,
-    title: 'Barber Aftershave',
-    category: 'Product Branding',
-    year: '2026',
-    img: '/projects/Barber Aftershave.png',
-    accent: '#1f2937',
-  },
-  {
     id: 22,
     title: 'Exploranova Tours',
     category: 'Logo Design',
