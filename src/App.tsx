@@ -51,7 +51,7 @@ const PROJECTS = [
   {
     id: 1,
     title: 'Exploranova',
-    category: 'Brand Identity',
+    category: 'Logo Design',
     year: '2024',
     img: '/projects/Exploranova.jpg',
     accent: '#2dd4bf',
@@ -61,13 +61,13 @@ const PROJECTS = [
     title: 'Arbanite Farm Ventures',
     category: 'Print & Collateral',
     year: '2023',
-    img: '/projects/Arbanite Farm Ventures.jpg',
+    img:  '/projects/Arbanite Farm Ventures.jpg',
     accent: '#818cf8',
   },
   {
     id: 4,
-    title: 'Laminar Engineering',
-    category: 'Print & Collateral',
+    title: 'L ',
+    category: 'Logo Design',
     year: '2023',
     img: '/projects/Laminar Engineering and Auto Spares.jpg',
     accent: '#fb7185',
@@ -75,7 +75,7 @@ const PROJECTS = [
   {
     id: 5,
     title: 'Linova Care Chemist',
-    category: 'Brand Identity',
+    category: 'Logo Design',
     year: '2023',
     img: '/projects/Linova Care Chemist.jpg',
     accent: '#34d399',
@@ -122,6 +122,54 @@ const PROJECTS = [
     accent: '#10b981',
   },
   {
+    id: 17,
+    title: 'Esther & Kenneth Wedding Invitation',
+    category: 'Wedding Invitations',
+    year: '2026',
+    img: '/projects/Esther and Kenneth Wedding.png',
+    accent: '#d4a574',
+  },
+  {
+    id: 18,
+    title: 'Joyce & Collins Wedding Invitation',
+    category: 'Wedding Invitations',
+    year: '2026',
+    img: '/projects/Joyce and Collins Wedding.png',
+    accent: '#b8860b',
+  },
+  {
+    id: 19,
+    title: 'Linnet & Nixon Wedding Invitation',
+    category: 'Wedding Invitations',
+    year: '2026',
+    img: '/projects/Linnet and Nixon Wedding.png',
+    accent: '#8b7500',
+  },
+  {
+    id: 20,
+    title: 'Liverpool vs Arsenal Watch Party',
+    category: 'Print & Collateral',
+    year: '2026',
+    img: '/projects/Liverpool vs Arsenal Event.png',
+    accent: '#dc2626',
+  },
+  {
+    id: 21,
+    title: 'Barber Aftershave',
+    category: 'Product Branding',
+    year: '2026',
+    img: '/projects/Barber Aftershave.png',
+    accent: '#1f2937',
+  },
+  {
+    id: 22,
+    title: 'Exploranova Tours',
+    category: 'Logo Design',
+    year: '2024',
+    img: '/projects/Exploranova Tours.png',
+    accent: '#a78b6f',
+  },
+  {
     id: 11,
     title: 'Product Branding',
     category: 'Product Branding',
@@ -131,7 +179,7 @@ const PROJECTS = [
   },
   {
     id: 12,
-    title: 'Kalita Nails [Image #2]',
+    title: 'Kalito Nails',
     category: 'Logo Design',
     year: '2026',
     img: '/projects/Kalita Nails Logo.png',
@@ -139,7 +187,7 @@ const PROJECTS = [
   },
   {
     id: 13,
-    title: 'Makeup Maven [Image #3]',
+    title: 'Makeup Maven',
     category: 'Logo Design',
     year: '2026',
     img: '/projects/Makeup Maven Logo.png',
@@ -147,15 +195,31 @@ const PROJECTS = [
   },
   {
     id: 14,
-    title: 'Product Branding [Image #3]',
+    title: 'Hisani',
     category: 'Product Branding',
     year: '2026',
     img: '/projects/Product Branding HISANI.png',
     accent: '#10b981',
+  },
+  {
+    id: 15,
+    title: 'Leleshwa',
+    category: 'Product Branding',
+    year: '2026',
+    img: '/projects/Product Branding 10ml.jpeg',
+    accent: '#22c55e',
+  },
+  {
+    id: 16,
+    title: 'Leleshwa 50ml',
+    category: 'Product Branding',
+    year: '2026',
+    img: '/projects/Product Branding 50ml.jpeg',
+    accent: '#22c55e',
   }
 ]
 
-const FILTERS = ['Brand Identity', 'Logo Design', 'Wedding Invitations', 'Print & Collateral', 'Product Branding']
+const FILTERS = ['Logo Design', 'Wedding Invitations', 'Print & Collateral', 'Product Branding']
 
 const TESTIMONIALS = [
   {
@@ -179,10 +243,12 @@ const TESTIMONIALS = [
 ]
 
 export default function App() {
-  const [activeFilter, setActiveFilter] = useState('Brand Identity')
+  const [activeFilter, setActiveFilter] = useState('Logo Design')
   const [scrolled, setScrolled] = useState(false)
   const [hoveredProject, setHoveredProject] = useState<number | null>(null)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [selectedProject, setSelectedProject] = useState<typeof PROJECTS[0] | null>(null)
+  const [previewIndex, setPreviewIndex] = useState(0)
   const heroRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -643,6 +709,10 @@ export default function App() {
                 project={project}
                 hovered={hoveredProject === project.id}
                 onHover={setHoveredProject}
+                onSelect={(proj) => {
+                  setSelectedProject(proj)
+                  setPreviewIndex(filtered.findIndex(p => p.id === proj.id))
+                }}
               />
             ))}
           </div>
@@ -856,6 +926,85 @@ export default function App() {
         </div>
       </footer>
 
+      {selectedProject && (
+        <div
+          style={{
+            position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.95)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            zIndex: 1000, padding: '2rem',
+          }}
+          onClick={() => setSelectedProject(null)}
+        >
+          <button
+            onClick={() => setSelectedProject(null)}
+            style={{
+              position: 'absolute', top: 20, right: 20, zIndex: 20,
+              background: 'none', border: 'none',
+              color: '#fff', fontSize: 32, cursor: 'pointer',
+              width: 40, height: 40, display: 'flex', alignItems: 'center', justifyContent: 'center',
+            }}
+          >×</button>
+
+          {filtered.length > 1 && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                setPreviewIndex((previewIndex - 1 + filtered.length) % filtered.length)
+              }}
+              style={{
+                position: 'absolute', left: 30, top: '50%', transform: 'translateY(-50%)',
+                zIndex: 20, background: 'none', border: 'none',
+                color: '#fff', cursor: 'pointer',
+                width: 40, height: 40, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                transition: 'opacity 0.3s',
+              }}
+              onMouseEnter={e => (e.currentTarget.style.opacity = '0.6')}
+              onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267 512.43" style={{ width: 30, height: 30, transform: 'scaleX(-1)' }}>
+                <path fill="currentColor" fillRule="nonzero" d="M3.22 18.9c-4.28-4.3-4.3-11.31-.04-15.64s11.2-4.35 15.48-.04l245.12 245.16c4.28 4.3 4.3 11.31.04 15.64L18.66 509.22a10.874 10.874 0 0 1-15.48-.05c-4.26-4.33-4.24-11.33.04-15.63L240.5 256.22 3.22 18.9z"/>
+              </svg>
+            </button>
+          )}
+
+          <div
+            style={{
+              position: 'relative', maxHeight: '90vh', maxWidth: '90vw',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+            }}
+            onClick={e => e.stopPropagation()}
+          >
+            <img
+              src={filtered[previewIndex].img}
+              alt={filtered[previewIndex].title}
+              style={{ maxHeight: '90vh', maxWidth: '90vw', objectFit: 'contain' }}
+            />
+          </div>
+
+          {filtered.length > 1 && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                setPreviewIndex((previewIndex + 1) % filtered.length)
+              }}
+              style={{
+                position: 'absolute', right: 30, top: '50%', transform: 'translateY(-50%)',
+                zIndex: 20, background: 'none', border: 'none',
+                color: '#fff', cursor: 'pointer',
+                width: 40, height: 40, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                transition: 'opacity 0.3s',
+              }}
+              onMouseEnter={e => (e.currentTarget.style.opacity = '0.6')}
+              onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267 512.43" style={{ width: 30, height: 30 }}>
+                <path fill="currentColor" fillRule="nonzero" d="M3.22 18.9c-4.28-4.3-4.3-11.31-.04-15.64s11.2-4.35 15.48-.04l245.12 245.16c4.28 4.3 4.3 11.31.04 15.64L18.66 509.22a10.874 10.874 0 0 1-15.48-.05c-4.26-4.33-4.24-11.33.04-15.63L240.5 256.22 3.22 18.9z"/>
+              </svg>
+            </button>
+          )}
+        </div>
+      )}
+
       <style>{`
         @keyframes scrollBob {
           0%, 100% { transform: translateY(0); opacity: 1; }
@@ -927,15 +1076,18 @@ function ProjectCard({
   project,
   hovered,
   onHover,
+  onSelect,
 }: {
   project: typeof PROJECTS[0]
   hovered: boolean
   onHover: (id: number | null) => void
+  onSelect: (project: typeof PROJECTS[0]) => void
 }) {
   return (
     <div
       onMouseEnter={() => onHover(project.id)}
       onMouseLeave={() => onHover(null)}
+      onClick={() => onSelect(project)}
       style={{
         borderRadius: 12, overflow: 'hidden',
         border: '1px solid rgba(20,184,166,0.12)',
